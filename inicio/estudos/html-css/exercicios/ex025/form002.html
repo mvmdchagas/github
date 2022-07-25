@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        form{
+            font-family: Arial, Helvetica, sans-serif;   
+            width: 300px;
+            padding: 5px;
+            font-size: 18px;
+            margin: 0 auto;
+            background-color: aquamarine;
+            border: none;
+        }
+        h1{
+            text-align: center;
+            background-color: darkred;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: whitesmoke;
+            
+        }
+        input{
+          font-size: 18px;  
+          
+        }
+        p{
+            margin: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="inome">Nome</label>
+            <input type="text" name="Nome" id="inome" placeholder="Nome Completo" required>
+        </p>
+        <p>
+            <label for="imedia">Média</label>
+            <input type="number" name="media" id="imedia" min="0" max="10" step="0.1" placeholder="0 - 10" required>
+        </p>
+        <p>
+            <label for="imes">Periodo Letivo</label>
+            <input type="month" name="mes" id="imes" required>
+        </p>
+        <p>
+            <label for="idia">Dia da prova</label>
+            <input type="date" name="dia" id="idia" required>
+        </p>
+        <p>
+            <label for="ihora">Hora da prova</label>
+            <input type="time" name="hora" id="ihora" required>
+        </p>
+
+        <p>
+            <input type="reset" value="LIMPAR">
+            <input type="submit" value="ENVIAR">
+        </p>
+
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+body{
+    font: normal 16px arial, verdana, serif;
+    background-color: bisque;
+}
+h1{
+    color: blueviolet;
+}
+h1#principal{
+    text-align: center;
+    background-color: blueviolet;
+    color: brown;
+}
+h1#principal:hover{
+    background-color: rgba(224, 12, 189, 0.808);
+    color: antiquewhite;
+    transition: 1.5s;
+}
+h2{
+    color: rgb(251, 127, 255);
+}
+div{
+    width: 100px;
+}
+div > p{
+    display: none;
+    width: 600px;
+}
+div:hover > p{
+    display: block;
+    background-color: aliceblue;
+    pad: 10px;
+}

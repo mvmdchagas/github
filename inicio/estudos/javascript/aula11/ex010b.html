@@ -5,29 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex010b</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18pt;
+        }
+        input#txtnac,#enviar{
+            font-size: 18pt;  
+        }
+        div#center{
+            display: flex;
+            justify-content: center;
+        }
+        div#center p{
+            width: 300px;
+        }
+        
+    </style>
 </head>
 <body>
 
-    <fieldset>
-        <legend>Nacionalidade</legend>
-        <h1>ver nacionalidade</h1>
-        <input type="text" name="nacional" id="nacional" placeholder="digite a nacionalidade">
-        <input type="button" value="enviar" onclick="nacionalidade()">
-        <div id="res">
-            <p>aguardando resposta...</p>
-        </div>
-        <script>
-            function nacionalidade(){
-                var pais = document.querySelector ('input#nacional')
-                res.innerHTML = `<p>pais selecionado: ${pais.value}</p>`
-                if(pais.value != 'brasil'){
-                    res.innerHTML +=`você é estrangeiro`
-                }else{
-                    res.innerHTML+=`brasileiro parabéns vc é mais um sobrevivente`
+    <div id="center">
+        <fieldset>
+            <legend>nacionalidade</legend>
+            <input type="text" name="txtnac" id="txtnac" placeholder="digite aqui a nacionalidade">
+            <input type="button" value="enviar" id="enviar" onclick="enviar()">
+            <div id="res"><p>aguardando envio...</p></div>
+            <script>
+                function enviar(){
+                    var nacionalidade = document.querySelector ('input#txtnac')
+                    res.innerHTML=`<p><strong>país</strong>: ${nacionalidade.value}</p>`
+                    if(nacionalidade.value != 'brasil'){
+                        res.innerHTML += `<p>você é estrangeiro</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum lorem eu egestas egestas. In hac habitasse platea dictumst. Sed sagittis laoreet risus at fermentum. Mauris vel lorem in ligula accumsan lacinia et non turpis. Phasellus euismod ac lectus in eleifend. Aenean non nibh aliquet, ullamcorper arcu non, venenatis sapien. Sed at mi in dui fermentum blandit eu at eros. Sed egestas sagittis sodales.</p>
+
+                        <p>Suspendisse potenti. Nulla tortor nisl, dictum vel lacus ac, blandit commodo lacus. Aliquam pharetra faucibus orci, quis tempor mauris pretium sit amet. Sed eleifend nibh sed ipsum elementum faucibus. Fusce aliquam, tellus a pellentesque aliquet, mi dolor semper purus, in tristique urna mi non tortor. Ut non leo nisi. Nulla augue felis, tempus a bibendum at, sodales id massa. Phasellus efficitur faucibus lectus non imperdiet. Quisque fermentum, elit eu fringilla gravida, quam sem congue lacus, eu pellentesque urna tellus eget nisi. Praesent eget leo efficitur, volutpat massa ac, lacinia felis. Proin consequat ultrices scelerisque.</p>
+
+                        
+                        `
+                    }else {
+                        res.innerHTML +=`<p>você é brasileiro, povo forte e batalhador.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum lorem eu egestas egestas. In hac habitasse platea dictumst. Sed sagittis laoreet risus at fermentum. Mauris vel lorem in ligula accumsan lacinia et non turpis. Phasellus euismod ac lectus in eleifend. Aenean non nibh aliquet, ullamcorper arcu non, venenatis sapien. Sed at mi in dui fermentum blandit eu at eros. Sed egestas sagittis sodales.</p>
+
+                        <p>Suspendisse potenti. Nulla tortor nisl, dictum vel lacus ac, blandit commodo lacus. Aliquam pharetra faucibus orci, quis tempor mauris pretium sit amet. Sed eleifend nibh sed ipsum elementum faucibus. Fusce aliquam, tellus a pellentesque aliquet, mi dolor semper purus, in tristique urna mi non tortor. Ut non leo nisi. Nulla augue felis, tempus a bibendum at, sodales id massa. Phasellus efficitur faucibus lectus non imperdiet. Quisque fermentum, elit eu fringilla gravida, quam sem congue lacus, eu pellentesque urna tellus eget nisi. Praesent eget leo efficitur, volutpat massa ac, lacinia felis. Proin consequat ultrices scelerisque.</p>`
+                    }
                 }
-            }
-        </script>
-    </fieldset>
+            </script>
+        </fieldset>
+    </div>
     
 </body>
 </html>

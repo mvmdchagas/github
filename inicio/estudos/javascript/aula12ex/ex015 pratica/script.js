@@ -13,13 +13,30 @@ function verificar(){
         var img = document.createElement ('img')
         img.setAttribute ('id', 'foto')
         if(selecionaGenero[0].checked){
-            genero = 'masculino'
+            genero = 'MASCULINO'
             if (idade >= 0 && idade < 10){
                 img.setAttribute ('src','img/criancamasc250.png')
+            }else if (idade <= 21){
+                img.setAttribute ('src','img/jovemmasc250.png' )
+            }else if (idade <= 50){
+                img.setAttribute ('src','img/adultomasc250.png')
+            }else {
+                img.setAttribute ('src', 'img/idosomasc250.png')
             }
-
         }
-        res.innerHTML = `[SISTEMA] - ${genero} com ${idade} anos`
+        if (selecionaGenero[1].checked){
+            genero = 'FEMININO'
+            if (idade >= 0 && idade < 10){
+                img.setAttribute ('src','img/criancafem250.png')
+            }else if (idade <= 21){
+                img.setAttribute ('src','img/jovemfem250.png' )
+            }else if (idade <= 50){
+                img.setAttribute ('src','img/adultafem250.png')
+            }else {
+                img.setAttribute ('src', 'img/idosafem250.png')
+            }
+        }
+        res.innerHTML = `<p>[SISTEMA] - GÊNERO: ${genero}, IDADE: ${idade} ANOS  </p>`
         res.appendChild(img)
     }
 }

@@ -6,31 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>formulário calculo idade</title>
 </head>
-<body>
+<body> 
+    <h1>exemplo de formulário</h1>
 
-    <form action="cadastro.php" method="get" autocomplete="on">
-        <p>
-            <label for="iano">em que ano você nasceu?</label>
-            <input type="number" name="ano" id="iano" min="1900" max="2020" oninput="calcidade()">
-        </p>
-
-        <p>
-            <label for="iidade">sua idade é: </label>
-            <output id="iidade">0</output>
-        </p>
-
-        <p>
-            <input type="submit" value="enviar">
-            <input type="reset" value="limpar">
-        </p>
-    </form>
-
-    <script>
-        function calcidade(){
-           let anoatual = new Date().getFullYear()
-           iidade.innerHTML = Number(anoatual) - Number(iano.value)
-        }
-    </script>
+    <fieldset>
+        <legend>calcular idade (ano)</legend>
+        <form action="cad.php" method="get">
+            <p>
+                <label for="iano">Ano de nascimento: </label>
+                <input type="number" name="ano" id="iano" min="1900" max="2020" required
+                oninput="calcidade()">
+            </p>
+            <p>
+                <label for="iidade">idade:</label>
+                <output id="iidade">0</output>
+            </p>
+            
+            <script>
+                function calcidade(){
+                    let anoAtual = new Date().getFullYear()
+                    iidade.innerHTML = Number(anoAtual) - Number(iano.value)
+                }
+            </script>
+        </form>  
+    </fieldset>
     
 </body>
 </html>

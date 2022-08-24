@@ -8,15 +8,20 @@
 </head>
 <body>
     <h1>exemplo de formulário</h1>
-    <form action="cadastro.php" method="get">
+    <fieldset>
+    <legend>Exemplo com range</legend>
+        <form action="cad.php" method="get">
+            <p>
+                <label for="inum">número:</label>
+                <input type="range" name="num" id="inum" min="0" max="10" value="5"
+                oninput="ivel.innerHTML = Number(inum.value)">
+                <output id="ivel">5</output>
 
-        <p>
-            <label for="inum">Número: </label>
-            <input type="range" name="num" id="inum" min="0" max="10" value="5" oninput="ival.innerHTML = Number(inum.value)">
-            <output id="ival">5</output>
-        </p>
+            </p>
+        </form>
+        
 
-    </form>
+    </fieldset>
     
 </body>
 </html>

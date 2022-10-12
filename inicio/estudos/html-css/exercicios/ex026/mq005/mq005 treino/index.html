@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bugadãoali</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/mediaquery.css">
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Logo</h1>
+        <span id="burguer" onclick="abrirMenu()">☰</span>
+        <menu id="itens">  
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    <main>
+        <article>
+            <h1>Seja bem vindx</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, voluptatum dolores dicta quis sint delectus praesentium, molestias ex, animi quos mollitia natus tenetur impedit! Mollitia repellat veritatis sit eligendi minus voluptatem dignissimos fugiat ipsam amet libero asperiores impedit, expedita dicta corrupti earum enim labore pariatur accusamus! Quam voluptatum sed quaerat voluptatem blanditiis magnam voluptate voluptates deserunt ex facilis necessitatibus officiis quia earum, vitae dolor temporibus ea aspernatur nihil. Dicta a nobis dignissimos, laborum atque adipisci doloribus sapiente doloremque magni et. Expedita pariatur iste, ea adipisci accusantium sequi, sapiente culpa eos repellat illum tempora magni velit assumenda debitis nemo id repellendus.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem dicta error possimus nesciunt voluptatum adipisci, porro soluta voluptate, eveniet impedit iusto modi aut, ad deserunt dolorum hic quis rerum debitis. Voluptatibus laborum cum totam veniam iusto, fugit amet? Nulla quibusdam dolore eum laboriosam? Similique accusantium quidem saepe cum at pariatur consequatur labore natus corporis, aspernatur ab perferendis, velit commodi molestiae. Similique blanditiis excepturi ducimus cupiditate dolor, optio impedit consequatur. Iste laborum rem, similique nemo provident, consequuntur enim modi nostrum odit incidunt aspernatur voluptates aperiam ipsam sequi vero corrupti? Error officiis molestias maxime nesciunt voluptatum incidunt! Maxime nobis earum aliquid quasi.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, ad explicabo, illum quae nemo nesciunt aliquam animi unde numquam ratione veniam quod, facilis odio ut recusandae voluptatem sequi placeat facere sunt! Vero mollitia recusandae consectetur ex, omnis, esse iure a iusto corrupti, asperiores cum fugit quisquam aliquid rem dolorem cupiditate odio reprehenderit qui sint nihil. Excepturi debitis hic, nam sint distinctio corrupti maiores omnis fugiat. Rerum quam fuga qui autem, error, laboriosam dignissimos ipsa incidunt eveniet officia libero veniam accusamus modi explicabo! Incidunt, atque iure expedita nisi placeat in? Quos nihil perferendis enim quaerat quisquam voluptas. Autem totam natus ea?</p>
+        </article>
+    </main>
+    <script>
+        function mudouTamanho(){
+            if(window.innerWidth>=768){
+                itens.style.display = 'block'
+            }else{
+                itens.style.display ='none'
+            }
+        }
+        function abrirMenu(){
+            if(itens.style.display == 'block')
+                itens.style.display = 'none'
+            else{
+                itens.style.display = 'block'
+            }
+
+        }
+    </script>
+    
+</body>
+</html>

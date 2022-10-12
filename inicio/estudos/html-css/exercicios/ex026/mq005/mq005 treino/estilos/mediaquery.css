@@ -1,0 +1,23 @@
+@charset "urf-8";
+
+@media screen and (min-width:768px) {
+    span#burguer{
+        display: none;
+    }
+    menu{
+        display: flex;
+        justify-content: center;
+    }
+    menu > ul > li {
+        display: inline-block;  
+    }
+    menu > ul > li > a {
+    background-color: darkred;
+    }
+    menu > ul > li > a:hover {
+    border-top: 1px solid red;
+    }
+    main{
+        width: 768px
+    }
+}

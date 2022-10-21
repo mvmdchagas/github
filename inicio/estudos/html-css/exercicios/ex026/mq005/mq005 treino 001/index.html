@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/mediaquery.css">
+    <title>Site responsivo</title>
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1><img src="imagens/comum.png" alt="" srcset=""></h1>
+        <span id="burguer" onclick="abrirMenu()">☰</span>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">INICIO</a></li>
+                <li><a href="#">SOBRE</a></li>
+                <li><a href="#">CONTATO</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    <main>
+        <article>
+            <h1>Lorem, ipsum.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae iure excepturi eum vitae possimus quam dolorum modi. Dolore asperiores atque nulla, eligendi similique illum mollitia rem eum, quia vero aliquid? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, deleniti. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt corrupti delectus neque a. Saepe nulla doloremque odio voluptate aliquid libero eaque laboriosam eum, non molestias earum laborum placeat similique nobis, adipisci modi dolore. Beatae accusantium, nihil tempora sequi molestiae, veritatis sint deleniti facilis, nostrum quaerat suscipit distinctio! Facere asperiores quod officiis dolor sint explicabo sunt ipsam amet, dolore porro quibusdam reiciendis quidem molestias saepe provident commodi magnam magni reprehenderit itaque placeat illo, praesentium alias animi nesciunt. Voluptatum ducimus aut quasi possimus in provident, dolorem, iusto dolore, eos accusantium fugit! Delectus tempore atque quasi suscipit odit ut deserunt vitae molestias voluptatem!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum reprehenderit praesentium modi! Quo iusto nemo quis dolorem molestiae odit facere, cum distinctio aliquid rem minus sunt suscipit facilis commodi reiciendis porro temporibus vero ipsum a aliquam amet. Reiciendis exercitationem voluptates explicabo, magnam eaque id mollitia tenetur iusto commodi! Tempora minus itaque obcaecati excepturi odit deleniti quas? A ut, numquam maiores qui corporis, fuga reiciendis tempora enim repellendus nesciunt, quos sapiente! Veritatis excepturi modi distinctio a! Doloremque quasi nobis iusto vero amet porro! Illum incidunt commodi reiciendis aliquam, iusto laborum explicabo perspiciatis similique pariatur sequi voluptates, aut quisquam illo. Illum sapiente qui optio quisquam voluptatibus recusandae possimus nam iusto est nemo, voluptatem ad eligendi incidunt repudiandae doloribus quis aut. At laboriosam, a assumenda cupiditate rerum minus excepturi dolorem, quod rem quasi praesentium? Nam, minima! Dolor vel alias nam nesciunt dolore, magnam dolorum id, reprehenderit distinctio excepturi autem quae maiores mollitia corporis voluptatibus animi delectus unde incidunt consequuntur accusamus cumque sed ipsam iure voluptatum. Eius, excepturi quisquam! Assumenda, dolorem inventore asperiores qui iusto quibusdam sapiente eveniet dolores dolorum non accusantium adipisci nobis quam eligendi eos beatae delectus debitis ad natus odit suscipit. Sequi dolorem at nam adipisci fugit! Eveniet dolor harum itaque.</p>
+        </article>
+    </main>
+    <script>
+        function mudouTamanho(){
+            if (window.innerWidth >= 768){
+                itens.style.display = "flex"
+            }else{
+                itens.style.display = "none"
+            }
+        }
+        function abrirMenu(){
+            if(itens.style.display == 'flex')
+            itens.style.display = 'none'
+            else{
+            itens.style.display = 'flex'
+            }
+        }
+    </script>
+    
+</body>
+</html>

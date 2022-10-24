@@ -2,12 +2,14 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.3rem;
 }
 header{
     background-color: darkred;
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 3px 10px black;
 }
 header .burguer{
     display:block;
@@ -33,32 +35,39 @@ header h1{
     padding: 10px;
     color: white;
 }
+menu#itens{
+    display: none;
+}
 menu ul{
-    list-style-type: none;  
+    list-style-type: none;
 }
 
 menu ul li a{
-    background-color: rgba(129, 129, 126, 0.342);
     font-size: 1.3rem;
     color: white;
     text-decoration: none;
     display: flex;
     justify-content: center;
     background-color: rgba(240, 255, 255, 0.288);
-    margin: 10px 0px;
+    margin-top: 5px;
     padding: 10px;
+    transition: 0.4s;
     
 }
 menu ul li a:hover{
     background-color: rgba(88, 7, 7, 0.918);
 }
 main {
-    background-color: rgba(241, 228, 228, 0.623);
+    margin-top: 10px;
+    background-color: darkred;
     border-radius: 10px;
     padding: 20px;
+    color: white;
 }
 main h1{
     text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 1px 3px 10px black;
 }
 main p {
     text-indent: 10px;

@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/mediaquery.css">
+
     <title>responsivo site</title>
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         
         <h1><img src="imagens/comum.png" alt="mão com punho levantado"></h1>
-        <div class="burguer" onclick="myFunction(this)">
+        <div id="burguer" class="burguer" onclick="myFunction(this), mostrarMenu()">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <menu>
+        <menu id="itens">
             <ul>
                 <li><a href="#">inicio</a></li>
                 <li><a href="#">sobre</a></li>
@@ -26,7 +28,7 @@
     </header>
 
     <main>
-        <h1>Lorem</h1>
+        <h1>A luta popular continua</h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi doloremque consequatur voluptates ipsam illo deserunt corporis aliquid ducimus, officiis repellendus eaque laboriosam consectetur, impedit sapiente inventore iste voluptatem repellat veniam.</p>
         
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident laudantium quis incidunt, reprehenderit nesciunt doloribus maxime non obcaecati expedita, dolor ullam ipsam voluptates illo eum, ut accusantium repellat aspernatur recusandae? Deserunt quasi minima, quam ducimus natus earum delectus libero sapiente ullam reiciendis labore aut suscipit reprehenderit repellat assumenda modi similique harum necessitatibus blanditiis? Illo magni iste odio temporibus! Dolor corporis molestias neque, quia repellat, minus veniam recusandae magnam harum eaque quibusdam sint officiis facere nulla placeat non saepe, sed hic inventore quam. Amet fugiat, assumenda dolorum omnis cumque minus provident ullam architecto numquam animi aliquam aliquid. Tenetur fugit adipisci inventore praesentium quia quas nisi quo assumenda, molestias nostrum deleniti facilis exercitationem odit quod est laboriosam! Optio velit nobis molestiae tenetur. Nihil quaerat explicabo quidem aliquid sequi, sint placeat et at alias? Quidem ad consequatur porro incidunt fuga. Laudantium, tenetur. Ut inventore explicabo modi exercitationem molestiae obcaecati repudiandae quod facilis error ex, quasi et itaque corrupti? Autem optio fugit delectus error? Omnis voluptatum dolorum architecto doloremque neque est nesciunt voluptatibus quis totam hic provident ducimus at, illum maiores tempora praesentium reiciendis natus consequuntur eligendi laboriosam libero, veniam vitae cumque. Provident, amet, rerum error tenetur soluta incidunt sint qui minima ullam perspiciatis numquam quos, maiores praesentium aspernatur. Adipisci magnam quam aut consequuntur optio molestiae vitae! Reiciendis quidem laudantium consequatur molestias aliquid. Quos quod earum modi delectus ipsa nobis natus officia, dicta aperiam aliquid itaque nulla alias aut, architecto harum doloremque, perferendis odit autem? Nam unde totam consequuntur sit aspernatur deserunt doloribus et?</p>
@@ -34,9 +36,27 @@
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum labore doloribus atque laboriosam praesentium illo soluta tempore nihil ut libero cupiditate, magnam saepe recusandae placeat suscipit! Architecto voluptatum esse sapiente laboriosam qui, sit nulla explicabo iure, corrupti delectus aspernatur mollitia eveniet facilis blanditiis distinctio. Saepe pariatur accusantium dolor. Fugit, suscipit.</p>
     </main>
     <script>
+        
+        function mostrarMenu(){
+            if(itens.style.display == 'block'){
+                itens.style.display = 'none'
+            }else{
+                itens.style.display = 'block'
+            }
+        }
+        function mudouTamanho(){
+            if(window.innerWidth >= 768){
+                itens.style.display = 'block'
+            }else{
+                itens.style.display = 'none'
+            }
+        }
         function myFunction(x) {
           x.classList.toggle("change");
         }
+        
+        
+        
         </script>
     
 </body>

@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+@media screen and (min-width:768px) {
+    div.burguer{
+        display: none;
+    }
+    menu#itens{
+        display: flex;
+        justify-content: center;
+        
+    }
+    menu ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+    menu ul li {
+        margin: 0 10px;
+        
+    }
+    menu ul li a{
+        background-color: transparent;
+        margin-top: 10px;
+        padding: 10px;
+        border-top: 1px solid white;
+    }
+    menu ul li a:hover{
+        background-color: transparent;
+        color: red;
+        text-shadow: 1px 3px 10px black;
+        transition: 0.4s;
+        border-top: 1px solid red;
+        
+    }
+    main{
+        width: 1024px;
+        margin: 10px auto;
+    }
+}

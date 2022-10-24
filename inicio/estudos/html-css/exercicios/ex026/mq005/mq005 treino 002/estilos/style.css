@@ -11,7 +11,7 @@ header{
     flex-direction: column;
     box-shadow: 0px 3px 10px black;
 }
-header .burguer{
+header .burguer-ico{
     display:block;
     cursor: pointer;
     margin: auto;
@@ -24,12 +24,13 @@ header .bar1, .bar2, .bar3{
     transition: 0.4s;
 }
 
+/*
 .change .bar1 {transform: translate(0, 11px) rotate(-45deg);}
   
 .change .bar2 {opacity: 0;}
   
 .change .bar3 {transform: translate(0, -11px) rotate(45deg);}
-
+*/
 header h1{
     text-align: center;
     padding: 10px;
@@ -37,6 +38,8 @@ header h1{
 }
 menu#itens{
     display: none;
+    transition: 4s;
+    
 }
 menu ul{
     list-style-type: none;
@@ -48,14 +51,15 @@ menu ul li a{
     text-decoration: none;
     display: flex;
     justify-content: center;
-    background-color: rgba(240, 255, 255, 0.288);
+    background-color: rgba(88, 7, 7, 0.918);
     margin-top: 5px;
     padding: 10px;
     transition: 0.4s;
     
 }
 menu ul li a:hover{
-    background-color: rgba(88, 7, 7, 0.918);
+    background-color: rgb(255, 255, 255);
+    color: darkred;
 }
 main {
     margin-top: 10px;

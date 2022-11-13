@@ -24,21 +24,21 @@
                 
             </div>
             <div id="formulario">
-                <h1>login</h1>
-                <p>Faça o login para acessar sua conta</p>
+                <h1>Área de acesso</h1>
+                <p>digite seu usuário e senha para entrar</p>
                 <form action="#" method="post" autocomplete="on">
                     <div class="campo">
                         <span class="material-symbols-outlined">person</span>
-                        <input type="email" name="login" id="ilogin" placeholder="email" autocomplete="email">
+                        <input type="email" name="login" id="ilogin" placeholder="email" autocomplete="email" required maxlength="30">
                         <label for="ilogin">login</label>
                     </div>
                     <div class="campo">
                         <span class="material-symbols-outlined">vpn_key</span>
-                        <input type="password" name="senha" id="isenha" placeholder="senha" autocomplete="current-password">
+                        <input type="password" name="senha" id="isenha" placeholder="senha" autocomplete="current-password" required minlength="8" maxlength="20">
                         <label for="isenha">senha</label>
                     </div>
                     <input type="submit" value="Entrar">
-                    <a href="#">
+                    <a href="#" class="botao">
                         esqueci a senha <span class="material-symbols-outlined">mail</span>
                     </a>
                 </form>

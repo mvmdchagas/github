@@ -4,22 +4,22 @@ switch (diaSem){
     case 0:
         console.log('domingo')
         break
-    case 2:
+    case 1:
         console.log('segunda')
         break
-    case 3:
+    case 2:
         console.log('terça')
         break
-    case 4:
+    case 3:
         console.log('quarta')
         break
-    case 5:
+    case 4:
         console.log('quinta')
         break
-    case 6:
+    case 5:
         console.log('sexta')
         break
-    case 7:
+    case 6:
         console.log('sábado')
         break
     default:

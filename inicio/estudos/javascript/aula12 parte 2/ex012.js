@@ -1,8 +1,8 @@
 var agora = new Date()
 var min = new Date()
-var hora = 15
+var hora = agora.getHours()
 var minutos = min.getMinutes()
-console.log (`agora sao exatamtnte ${hora} horas ${minutos} min`)
+console.log (`agora sao exatamtnte ${hora} horas ${minutos} minutos`)
 if (hora >= 6 && hora <= 11){
     console.log (' bom dia')
 

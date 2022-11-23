@@ -1,8 +1,9 @@
-var pais = 'brasil'
-console.log (`vivendo em ${pais}`)
-if (pais != 'brasil'){
-    console.log ('você é estrangeiro')
+//ondição composta
 
+var país = 'Brasil'
+console.log (`vivendo em ${país}`)
+if (país == 'Brasil'){
+    console.log ('você é brasileiro !')
 }else{
-    console.log ('você é brasileiro')
+    console.log ('você é estrangeiro! ')
 }

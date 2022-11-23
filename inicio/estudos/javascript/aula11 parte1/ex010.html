@@ -4,62 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DETRAN</title>
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 18pt;
-        }
-        input#txtvelocidade {
-            height: 50px;
-            width: 300px;
-            font-size: 18pt;
-        }
-        input#botao{
-            height: 50px;
-            color: darkred;
-
-        }
-        #vermelho{
-            color: red;
-        }
-        #center{ 
-            display: flex;
-            justify-content: center;
-            
-        }
-    </style>
+    <title>sistema de multa - detran</title>
 </head>
 <body>
-    <div id="center">
-        <fieldset>
-            <legend>DETRAN - MULTAS</legend>
-            <h1>Sistema de multas</h1>
-            <input type="number" name="txtvelocidade" id="txtvelocidade" placeholder="insira o valor aqui">
-            <input type="button" value="Verificar" id="botao" onclick="verificador_Multa()">
-            <div id="res"><p><strong>Preencha o campo acima com o valocidade do veiculo</strong></p></div>
 
-                <script>
-                    function verificador_Multa(){
-                        var txtv = document.querySelector ('input#txtvelocidade') //pega o elemento #input#txtvelocidade
-                        var res = document.querySelector ('div#res') //pega o elemento div#res
-                        var vel = Number (txtv.value) //transforma o string em numero 
-                        var limite = 80 // limite da via
-                        res.innerHTML = `<p id='vermelho'><strong>USE O CINTO DE SEGURANÇA, DIRIJA COM CUIDADO !</strong></p>`
-                        res.innerHTML += `<p><strong>LIMITE</strong>: ${limite}</p>`    
-                        res.innerHTML += `<p><strong>VELOCIDADE</strong>: ${vel} km/h</p>`
-                        
-                            if(vel > limite){
-                                res.innerHTML += `<p><strong>STATUS</strong>: multa gerada - excesso de velocidade</p>`
+    <fieldset>
+        <legend>detran</legend>
+        <h1>Sistema de multas</h1>
+        <p>Velocidade: <input type="text" name="txtvel" id="txtvel"> <input type="button" value="verificar" onclick="calcular()"></p>
+        <div id="res"></div>
+    </fieldset>
 
-                            }else{
-                                res.innerHTML += `<p><strong>STATUS</strong>: dentro do limite</p>`
-                            }
-                    }
-
-                </script>
-
-        </fieldset>
-    </div>
+    <script>
+        function calcular(){
+        let txtv = document.querySelector ('input#txtvel')
+        let res = document.querySelector ('div#res')
+        let vel = Number(txtv.value)
+        res.innerHTML = `<p>velocidade registrada: <strong>${vel}km/h</strong></p>`
+            if(vel > 60){
+                res.innerHTML += `<p>velocidade permitida da via:<strong> 60km/h </strong></p>`
+                res.innerHTML += `<p>Status: <strong>MULTADO !</strong></p>`
+            }
+        res.innerHTML += `<p><strong>USE SEMPRE O CINTO DE SEGURANÇA</strong></p>`
+    }
+    </script>
+    
 </body>
 </html>

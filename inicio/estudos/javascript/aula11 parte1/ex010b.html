@@ -4,25 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nacionalidade</title>
+    <title>nacionalidade</title>
 </head>
 <body>
 
     <fieldset>
-        <legend>Nacionalidade</legend>
-        <h1>verificador de Nacionalidade</h1>
-        <p>pais: <input type="text" name="txtnac" id="txtnac"> <input type="button" value="verificar" onclick="enviar()"></p>
-        <div id="res">Aguardando dados serem preenchidos</div>
+        <legend>nacionalidade</legend>
+        <p> <label for="txtx" >pais</label> <input type="text" name="txtx" id="txtx"> <input type="button" value="enviar" onclick="carregar()"></p>
+        <div id="res">aguardando dados...</div>
     </fieldset>
+
     <script>
-        function enviar(){
-            let txtpais = document.querySelector('input#txtnac')
-            res.innerHTML = `nacionalidade: ${txtpais.value}`
-                if(txtpais.value != 'brasil'){
-                    res.innerHTML += `<p>você é estrangeiro</p>`
-                }else{
-                    res.innerHTML += `<p>você é brasil</p>`
-                }
+        function carregar(){
+            let x = document.querySelector ('input#txtx').value
+            let y = document.querySelector ('div#res')
+            if(x == ''){
+                y.innerHTML = `<p><strong>digite o país</strong></p>`
+            }else 
+                if(x != 'brasil'){
+                y.innerHTML = `<p>valor recebido: <strong>${x}</strong></p>`
+                y.innerHTML += `<p><strong>estrangeirx</strong></p>`
+
+            }else{
+                y.innerHTML = `<p>valor recebido: <strong>${x}</strong></p>`
+                y.innerHTML += `<p><strong>brasileiro</strong></p>`
+
+            }
+//
         }
     </script>
     

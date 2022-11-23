@@ -1,5 +1,5 @@
-let agora = new Date()
-let diaSem = agora.getDay()
+//faça um programa que receba os dias da semana e mostre na tela
+let diaSem = new Date().getDay()
 
 switch (diaSem){
     case 0:
@@ -9,20 +9,21 @@ switch (diaSem){
         console.log ('segunda')
         break
     case 2:
-        console.log ('terça')
+        console.log('terça')
         break
     case 3:
         console.log ('quarta')
         break
     case 4:
-        console.log ('quinta')
+        console.log('quinta')
         break
     case 5:
-        console.log ('sexta')
+        console.log('sexta')
         break
     case 6:
-        console.log ('sábado')
+        console.log('sábado')
         break
     default:
-        console.log ('[ERRO] número inválido')
+        console.log('[erro] dia inválido')
+        break
 }

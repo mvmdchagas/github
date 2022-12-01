@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascriptprogressivo</title>
+    
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>verificador de vogal</legend>
+            <label for="txt">digite UMA letra</label>
+            <input type="text" id="txt" name="txt" placeholder="[a-z] - [A-Z] somente" maxlength="1" pattern="[A-Za-z]{1}">
+            <input type="submit" value="verificar" onclick="checar()">
+            <p id="msg">clique em verificar</p>
+        </fieldset>
+    </form>
+    <script>
+        function checar(){
+            const ftxt = document.querySelector ('input#txt').value;
+            letra = ftxt.toLowerCase();
+            const msg = document.querySelector ('p#msg');
+            
+            if (ftxt.length == 0){
+                window.alert ('digite algo')     
+            }else if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u'){
+                window.alert('vogal')
+            } else{
+                window.alert('consoante')
+            }
+        }
+    </script>
+</body>
+</html>

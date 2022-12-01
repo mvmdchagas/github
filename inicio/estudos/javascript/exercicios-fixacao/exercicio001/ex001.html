@@ -54,21 +54,22 @@
     <!--
      "Faça um script que verifique se uma letra digitada num campo de input é vogal ou consoante." 
     -->
-    <form>
+   
         <fieldset>
         <legend>verificador de letra</legend>
         <label for="txt">digite uma letra</label>
-        <input type="text" name="txt" id="txt" maxlength="1" placeholder="[A-Za-z] 1 letra somente" pattern="[A-Za-z]{1}" title="*SOMENTE UMA LETRA, NUMEROS NÃO ACEITO ">
+        <input type="text" name="txt" id="txt" required maxlength="1" placeholder="[A-Za-z] 1 letra somente" pattern="[A-Za-z]+" title="*SOMENTE UMA LETRA, NUMEROS NÃO ACEITO ">
         <input type="submit" value="verificar" onclick="verificar()">
         <p id="msg">clique em verificar</p>
         
     </fieldset>     
-    </form>
+    
     <script>
         function verificar(){
             var ftxt = document.querySelector('input#txt').value;
             ftxt = ftxt.toLowerCase();
-            if(ftxt.length == 0 || ftxt == 0 || ftxt == 1 || ftxt == 2 || ftxt == 3 || ftxt == 4 || ftxt == 5 || ftxt == 6 || ftxt == 7 || ftxt == 8 ||ftxt == 9){
+            
+            if(ftxt.length == 0){
                 window.alert ('digite algo e não use números.')
             }else if(ftxt == 'a' || ftxt == 'e' || ftxt == 'i' || ftxt == 'o' || ftxt == 'u'){
                 window.alert ('vogal')
@@ -76,6 +77,13 @@
                 window.alert ('consoante')
             }
         }
+        //https://pt.stackoverflow.com/questions/91477/como-bloquear-caracteres-especiais-em-campo
+        document.getElementById("txt").onkeypress = function(e) {
+         var chr = String.fromCharCode(e.which);
+         if ("qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM".indexOf(chr) < 0)
+           return false;
+       }
+        
         
     </script>
 </body>

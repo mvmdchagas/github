@@ -5,6 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>javascriptprogressivo</title>
+    <style>
+        body{
+            background-color: #972b3d;
+            color: #d96f6c;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1.2rem
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            
+            
+        }
+        input {
+            border: 0;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: white;
+
+        }
+        input:hover{
+            background-color: #ffd2cb;
+        }
+        fieldset{
+            background-color: #f6b9b3;
+            border: none;
+            padding-top: 30px;
+            border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+        legend{
+            background-color: #972b3d;
+            border-radius: 5px;
+            padding: 10px;
+            color: white;
+        }
+    </style>
     
 </head>
 <body>
@@ -18,14 +59,14 @@
         <input type="text" name="txt" id="txt" maxlength="1" placeholder="[A-Za-z] 1 letra somente" pattern="[A-Za-z]{1}" title="*SOMENTE UMA LETRA, NUMEROS NÃO ACEITO ">
         <input type="submit" value="verificar" onclick="verificar()">
         <p id="msg">clique em verificar</p>
+        
     </fieldset>     
     </form>
     <script>
         function verificar(){
             var ftxt = document.querySelector('input#txt').value;
             ftxt = ftxt.toLowerCase();
-            ftxt = Number();
-            if(ftxt.length == 0 || ftxt == 0 ){
+            if(ftxt.length == 0 || ftxt == 0 || ftxt == 1 || ftxt == 2 || ftxt == 3 || ftxt == 4 || ftxt == 5 || ftxt == 6 || ftxt == 7 || ftxt == 8 ||ftxt == 9){
                 window.alert ('digite algo e não use números.')
             }else if(ftxt == 'a' || ftxt == 'e' || ftxt == 'i' || ftxt == 'o' || ftxt == 'u'){
                 window.alert ('vogal')

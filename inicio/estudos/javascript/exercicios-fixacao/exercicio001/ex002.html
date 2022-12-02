@@ -21,6 +21,7 @@
             padding: 10px;
             color: #fc0284;
             text-shadow: 3px 3px 3px black;
+            cursor: default;
         }
         fieldset{
             position: absolute;
@@ -75,18 +76,32 @@
     <label for="txtnota2">Nota 2</label>
     <input type="text" name="txtnota2" id="txtnota2">
     <input type="button" value="verificar" onclick="verificar()">
-    <p id="msg">aguardando dados...</p>
+    <p id="msg">[0-9] somente</p>
 </fieldset>
 <script>
+    document.getElementById("txtnota1").onkeypress = function(e) {
+         var chr = String.fromCharCode(e.which);
+         if ("0123456789".indexOf(chr) < 0)
+           return false;
+       }
+       //https://pt.stackoverflow.com/questions/91477/como-bloquear-caracteres-especiais-em-campo
+       document.getElementById("txtnota2").onkeypress = function(e) {
+         var chr = String.fromCharCode(e.which);
+         if ("0123456789".indexOf(chr) < 0)
+           return false;
+       }
     function verificar (){
         let txtnota1 = document.querySelector ('input#txtnota1').value;
         let txtnota2 = document.querySelector ('input#txtnota2').value;
         let msg = document.querySelector ('p#msg');
+        //https://www.devmedia.com.br/forum/somar-valores-em-javascript/440126
+        //Mas quando se trata da soma (+), temos que imaginar que para concatenar strings também usamos o sina de "+", então temos que converter explicitamente os valores em números, para que não ocorra uma concatenação:
         let media = (parseInt(txtnota1)+ parseInt(txtnota2)) / parseInt (2);
         msg.innerHTML = `nota 1: ${txtnota1}`;
         msg.innerHTML += `<br>nota 2: ${txtnota2}`;
         msg.innerHTML += `<br>MEDIA: ${media}`;
     }
+
 
 </script>
 </form>

@@ -27,9 +27,11 @@
         var msg = document.querySelector ('div#msg p');
 
         var maiorNumero = n1
+
         if(n2 > maiorNumero){
             maiorNumero = n2
-        }else if(n3 > maiorNumero){
+        }
+        if(n3 > maiorNumero){
             maiorNumero = n3
         }
         msg.innerHTML = `${maiorNumero}`

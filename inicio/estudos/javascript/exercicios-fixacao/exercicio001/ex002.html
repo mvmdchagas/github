@@ -96,10 +96,14 @@
         let msg = document.querySelector ('p#msg');
         //https://www.devmedia.com.br/forum/somar-valores-em-javascript/440126
         //Mas quando se trata da soma (+), temos que imaginar que para concatenar strings também usamos o sina de "+", então temos que converter explicitamente os valores em números, para que não ocorra uma concatenação:
+        if(isNaN(txtnota1) || isNaN(txtnota2)){
+            msg.innerHTML = `preencha os campos`;
+        }else{
         let media = (txtnota1 + txtnota2) / 2;
         msg.innerHTML = `nota 1: ${txtnota1}`;
         msg.innerHTML += `<br>nota 2: ${txtnota2}`;
         msg.innerHTML += `<br>MEDIA: ${media}`;
+        }
     }
 
 

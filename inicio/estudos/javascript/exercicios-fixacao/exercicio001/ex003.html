@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!--Faça um script que leia três números inteiros e mostre o maior deles.-->
+    <label for="txtn1">digite um número</label>
+    <input type="number" name="txtn1" id="txtn1">
+    <label for="txtn2">outro número qualquer</label>
+    <input type="number" name="txtn1" id="txtn2">
+    <label for="txtn3">outro número de novo</label>
+    <input type="number" name="txtn1" id="txtn3">
+    <input type="button" value="check" onclick="check()">
+    <div id="msg">
+     <p>mensagem aqui</p>   
+    </div>
+</body>
+<script>
+    function check(){
+        var n1 = parseInt(document.querySelector ('input#txtn1').value);
+        var n2 = parseInt(document.querySelector ('input#txtn2').value);
+        var n3 = parseInt(document.querySelector ('input#txtn3').value);
+        var msg = document.querySelector ('div#msg p');
+
+        var maiorNumero = n1
+        if(n2 > maiorNumero){
+            maiorNumero = n2
+        }else if(n3 > maiorNumero){
+            maiorNumero = n3
+        }
+        msg.innerHTML = `${maiorNumero}`
+    }
+    
+</script>
+</html>

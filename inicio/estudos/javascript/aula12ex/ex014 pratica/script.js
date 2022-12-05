@@ -1,9 +1,9 @@
 function carregar(){
-    let horaAtual = new Date().getHours()
-    let min = new Date().getMinutes()
-    let msg = document.querySelector ('main div p#msg')
-    let img = document.querySelector ('main div img#imagem')
-    msg.innerHTML = `horario local: ${horaAtual} : ${min}`
+    let horaAtual = new Date().getHours();
+    let min = new Date().getMinutes();
+    let msg = document.querySelector ('main div p#msg');
+    let img = document.querySelector ('main div img#imagem');
+    msg.innerHTML = `${horaAtual} : ${min}`;
     
     if (horaAtual >= 00 && horaAtual <=5){
         img.src = 'imagens/fotomadrugada.png'

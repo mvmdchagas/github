@@ -58,30 +58,44 @@
     <form action="">
         <fieldset>
             <legend>variável auxiliar</legend>
-            <input type="number" name="txtn1" id="txtn1" placeholder="digite aqui">
-            <input type="number" name="txtn2" id="txtn2" placeholder="digite aqui">
+            <input type="text" name="txtn1" id="txtn1" placeholder="digite aqui">
+            <input type="text" name="txtn2" id="txtn2" placeholder="digite aqui">
             <input type="button" value="verificar" id="botao" onclick="check()">
             <div id="msg">
                 
             </div>
         </fieldset>
         <script>
-            function check(){
+            document.querySelector('input#txtn1').onkeypress = function(e) {
+            var chr = String.fromCharCode(e.which);
+            if ("1234567890".indexOf(chr) < 0)
+            return false;
+            }
+            document.querySelector('input#txtn2').onkeypress = function(e) {
+            var chr = String.fromCharCode(e.which);
+            if ("1234567890".indexOf(chr) < 0)
+            return false;
+            }
+            
+        function check(){
             var n1 = parseInt(document.querySelector ('input#txtn1').value);
             var n2 = parseInt(document.querySelector ('input#txtn2').value);
             var msg = document.querySelector('div#msg');
+
+            
             
             if (isNaN (n1) || isNaN(n2)){
                 msg.innerHTML=`<p>campo vazio, preencha os dados</p>`
             }else{
-            
             msg.innerHTML = `<p>valor anterior: ${n1} e ${n2}</p>`;
             var guarda = n1;
             n1   = n2;
             n2 = guarda
             msg.innerHTML += `<p>novos valores: ${n1} e ${n2}</p>`;
-        }
-            } 
+            }
+            //https://pt.stackoverflow.com/questions/91477/como-bloquear-caracteres-especiais-em-campo
+        
+        } 
          </script>
     </form>
        

@@ -5,40 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-    
-    <title>verificador de idade</title>
+    <title>verificar idade</title>
 </head>
 <body>
-    <header>
-        <h1>verificador de idade</h1>
-    </header>
-
     <main>
-        <section>
-            <div>
-                <p>
-                    <label for="txtano">Ano de nascimento</label>
-                    <input type="number" name="txtano" id="txtano">
-                </p>
-                <p>
-                    <input type="radio" name="escolhaGenero" id="masculino">
-                    <label for="masculino">Masculino</label>
-                    <input type="radio" name="escolhaGenero" id="feminino">
-                    <label for="feminino">Feminino</label>
-                </p> 
-                <p>
-                    <input type="button" value="verificar" onclick="verificar()">
-                </p>
-            </div>
-            <div>
-                <p id="res">preencha os dados</p>
-            </div>
+        <section id="formulario">
+            <form action="#" method="#">
+                <fieldset>
+                    <legend>Verificar idade</legend>
+                    <label for="anonasc">Ano de nascimento</label>
+                    <input type="number" name="anonasc" id="anonasc" placeholder="AAAA">
+                    <label for="masc">Masculino
+                    <input type="radio" name="radiogenero" id="masc"></label>
+                    <label for="fem">Feminino
+                    <input type="radio" name="radiogenero" id="fem"></label>
+                    <input type="button" value="verificar" id="botao" onclick="verificar()">
+
+                    <div id="res">
+
+                    </div>
+                </fieldset>
+                
+            </form>
         </section>
     </main>
-        
-    <footer>
-        <p>feito por Marcos Venicio</p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>

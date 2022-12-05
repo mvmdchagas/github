@@ -1,49 +1,47 @@
 function verificar(){
-    var ano = new Date().getFullYear()
-    var fano = document.getElementById('txtano')
-    var res = document.querySelector('div p#res')
-    if(fano.value.length == 0 || fano.value > ano){
-        res.innerHTML = ('<p><strong>[ERRO]</strong> Dados inválidos</p>')
+    var anoAtual = new Date().getFullYear();
+    var anoNasc = document.querySelector ('input#anonasc').value;
+    var res = document.querySelector ('div#res');
+    if(anoNasc.length == 0 || anoNasc > anoAtual){
+        res.innerHTML = `<p style ="color:#fda543">verifique os dados e tente novamente</p>`;
     }else{
-        var generoEscolhido = document.getElementsByName('escolhaGenero')
-        var idade = ano - Number(fano.value)
-        var genero = ''
+        var selecionaGenero = document.getElementsByName ('radiogenero');
+        var idade = anoAtual - Number(anoNasc)
+        genero = ''
+        var img = document.createElement ('img')
+        img.setAttribute ('id', 'foto');
 
-        var img = document.createElement('img')
-        img.setAttribute('id', 'foto')
+        if(selecionaGenero[0].checked){
+            genero = 'Masculino'
 
-        if(generoEscolhido[0].checked){
-           genero = '<p>Masculino</p>'
-           if (idade >= 0 && idade < 10){
-            //criança
-            img.setAttribute ('src', 'img/criancamasc250.png')
-           } else if(idade < 21){
-            //jovem
-            img.setAttribute ('src', 'img/jovemmasc250.png')
-           }else if (idade < 50){
-            //adulto
-            img.setAttribute ('src', 'img/adultomasc250.png')
-           } else{
-            // idoso
-            img.setAttribute ('src', 'img/idosomasc250.png')
-           }
-        }else if (generoEscolhido[1].checked){
-            genero = '<p>Feminino</p>'
-            if (idade >= 0 && idade < 10){
-                //criança
-                img.setAttribute ('src', 'img/criancafem250.png')
-               } else if(idade < 21){
-                //jovem
-                img.setAttribute ('src', 'img/jovemfem250.png')
-               }else if (idade < 50){
-                //adulto
-                img.setAttribute ('src', 'img/adultafem250.png')
-               } else{
-                // idoso
-                img.setAttribute ('src', 'img/idosafem250.png')
-               }
+            if (idade > 0 && idade < 10){
+                img.setAttribute ('src', 'img/criancamasc250.png')
+            }else if (idade <= 21){
+                img.setAttribute ('src' , 'img/jovemmasc250.png')
+            }else if (idade <= 50){
+                img.setAttribute ('src' , 'img/adultomasc250.png')
+            }else {
+                img.setAttribute ('src' , 'img/idosomasc250.png')
+            }
+
         }
-        res.innerHTML = `<p>${genero} com ${idade} anos</p>`
+        if(selecionaGenero[1].checked){
+            genero = 'Feminino'
+
+            if (idade > 0 && idade < 10){
+                img.setAttribute ('src', 'img/criancafem250.png')
+            }else if (idade <= 21){
+                img.setAttribute ('src' , 'img/jovemfem250.png')
+            }else if (idade <= 50){
+                img.setAttribute ('src' , 'img/adultafem250.png')
+            }else {
+                img.setAttribute ('src' , 'img/idosafem250.png')
+            }
+
+        }
+        res.innerHTML = `<p style ="text-align: center">${genero} com ${idade} anos  </p>`
         res.appendChild(img)
+        
     }
+
 }

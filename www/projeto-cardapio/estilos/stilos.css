@@ -1,60 +1,87 @@
-body{
-    background-color: #36173d;
-}
-h1{
-    font-family: 'Nunito', sans-serif;
-    color: #ff4845;
-    text-align: center;
-    font-size: 3rem;
-    text-shadow: 1px 1px 5px black;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     
 }
-.escolha{
+body{
+    background-color: #36173d;
     font-family: 'Nunito', sans-serif;
-    font-size: 2rem;
+}
+.conteudo-principal{
+    box-shadow: 0px 15px 22px 0px rgba(0,0,0,0.75);
+    background-color: #ffc55f;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 10px;
+}
+.conteudo-principal h1{
+    color: white;
+    text-align: center;
+    text-shadow: 1px 3px 10px black;
+    margin: 0;
+    font-size: 3rem;
+    
+}
+.sup-inf-linha{
     text-align: center;
     max-width: 600px;
+    padding: 5px;
     background-color: #620f52;
-    border-radius: 30px;
+    border-radius: 4px;
     margin: auto;
     color: #ffec5e;
 }
-.escolha h4{
-    margin: 0;
-}
-.superior .item2 img{
-    width: 100px;
-    border-radius: 50%;
-
-}
-main{
-    background-color: #ffc55f;
-    max-width: 900px;
-    margin: auto;
-    border-radius: 10px;
-}
-
-.superior, .inferior{
+.superior-itens{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    gap: 15%;
+    gap: 30%;
+    font-size: 1.6rem;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+
     
 }
-
-.inferior{
-    align-items: flex-start;
-}
-.acompanhamentos{
-    background-color: #620f51ab;
+.inferior-conteudo{
+    background-color: #ff4845;
     border-radius: 10px;
-}
-.item1, .item2, .item3{
-    font-size: 1.5rem;
+    text-align: center;
     color: white;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 3px black;
+    
 }
-.inferior > .item2{
-   
+.inferior-itens{
+    font-size: 1.6rem;
+}
+.pediragora{
+    margin-top: 20px;
+}
+.pediragora .botao{
+    border: none;
+    background-color: transparent;  
+}
+.pediragora .botao a{
+    text-decoration: none;
+    font-size: 2rem;
+    background-color: #36173d;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+}
+
+.pediragora .botao a:hover{
+    background-color: #ffec5e;
+    color: #620f52;
+}
+.rodape{
+    margin-top: 10px;
+}
+@media screen and (min-width:600px) {
+    .inferior-itens{
+        display: flex;
+        justify-content: center;
+        gap: 5%;
+    }
+
 }

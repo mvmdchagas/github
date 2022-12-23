@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>formulario freecodecamp</title>
+</head>
+
+<body>
+ <div class="container"> 
+   <header>
+     <h1 id="title">Formulário de melhoria</h1>
+     <p id="description">agradeço seu tempo, buscamos sempre melhorar</p>
+   </header>
+   
+   <form id="survey-form"> 
+    <div class="form-group">
+      <label for="name" id="name-label">Nome</label>
+      <input
+        type="text"
+        id="name"
+        placeholder="Digite o nome"
+        required
+      />
+    </div>
+   
+   <div class="form-group">
+     <label for="email" id="email-label">Endereço eletrônico</label>
+      <input
+      type="email"
+      id="email"
+      placeholder="Digite o endereço@eletronico " required
+      />
+   </div>
+   
+   <div class="form-group">
+     <label for="number" id="number-label">Idade</label>
+     <input
+     type="number"
+     id="number"
+     min="13"
+     max="120"
+     placeholder="Digite a idade"
+     />
+   </div>
+   
+   <div class="form-group">
+     <p>qual das opções?</p>
+     <select id="dropdown">
+      <option disabled selected value>Selecione</option>
+      <option value="opcao1">Opcao 1</option>
+      <option value="opcao2">Opcao 2</option>
+     </select>
+   </div>
+   
+   
+   <div class="form-group">
+     <p>podemos ser feliz o tempo todo?</p>
+     <label>
+      <input
+        type="radio"
+        name="rec"
+        value="certeza"
+        checked
+        />Sim, com certeza</label
+      >
+   </div>
+  
+   <div class="form-group">
+     <label>
+      <input
+        type="radio"
+        name="rec"
+        value="talvez"
+        />Talvez</label
+      >
+   </div>
+   
+   <div class="form-group">
+     <label>
+      <input
+        type="radio"
+        name="rec"
+        value="nao-sei"
+        />Não sei</label
+      >
+   </div>
+
+   <div class="form-group">
+    <p>Lorem ipsum dolor sit amet?</p>
+    <select id="fav" name="fav"  required>
+      <option disabled selected value>Selecione</option>
+      <option value="lorem">Lorem</option>
+      <option value="ipsum">Ipsum</option>
+      <option value="ipsum">Dolor</option>
+      <option value="ipsum">Sit</option>
+      <option value="ipsum">Amet</option>
+    </select>
+    </div>
+   
+   <div class="form-group">
+     <p>Lorem ipsum?</p>
+     <label
+      ><input
+        type="checkbox"
+        value="ser-feliz"
+        checked
+        />lorem</label
+      >
+
+     <label>
+      <input
+        type="checkbox"
+        value="back-end
+        /">ipsum</label
+      >
+   </div>
+   
+   <div class="form-group">
+    <p>Sugestões ou comentários</p>
+    <textarea
+      placeholder="digite aqui"
+    ></textarea>
+   </div>
+
+   <div class="form-group">
+     <input type="submit" id="submit"/>
+    </div>
+
+    </form>
+ </div>
+</body>
+</html>
+

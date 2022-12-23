@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #322030;
+    color: #fcfdeb;
+   
+}
+h1#title{
+    font-size: 4rem;
+    color: #fcfdeb;
+}
+p#description{
+    margin-bottom: 3%;
+    color: #e3cebd;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+    
+}
+label {
+    display: flex;
+    
+}
+form{
+    background-color: #725b75;
+    width: 690px;
+    border-radius: 10px;
+    padding-bottom: 5%;
+    
+}
+.form-group{
+    font-size: 1.125rem;
+    padding: 10px 50px;
+}
+#email, #email-label, #name,#name-label,#number,#number-label,select, textarea{
+    width: 100%;
+    font-size: 1.125rem;
+    border: none;
+    padding:10px 0px;
+    border-radius: 5px;
+}
+select:hover{
+    background-color: #322030;
+    color: white;
+}
+.form-group > input#submit{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #e3cebd;
+    font-size: 1.125rem;
+    color: #322030;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.form-group > input#submit:hover{
+    color: white;
+    background-color: #322030;;
+   
+}
+
+
+  

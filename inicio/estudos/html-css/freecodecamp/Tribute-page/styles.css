@@ -1,5 +1,50 @@
+h1,
+p{
+  text-align: center;
+}
+h1{
+  font-size: 2.5rem;
+}
+body{
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #eeeeee;
+  margin-top: 3%;
+}
+figure{
+  background-color: white;
+  width: 97%;
+  text-align: center;
+  padding-bottom: 2%;
+
+}
 #image{
     display:block;
     max-width:100%;
-    heigh:auto;
-  }
+    height:auto;
+    margin: auto;
+    margin-bottom: 2%;
+}
+#tribute-info > h3{
+  text-align: center;
+  margin-bottom: 50px;
+}
+#tribute-info ul{
+  max-width: 550px;
+  margin:0 auto 50px auto;
+}
+#tribute-info li{
+  margin: 16px 0;
+}
+blockquote{
+  font-style: italic;
+  max-width: 545px;
+  margin: 0 auto 50px auto;
+  text-align: left; 
+}

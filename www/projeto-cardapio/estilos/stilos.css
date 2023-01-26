@@ -1,87 +1,85 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    
+
+html{
+    background-color: #340c31;
+    font-family: Nunito
 }
-body{
-    background-color: #36173d;
-    font-family: 'Nunito', sans-serif;
-}
-.conteudo-principal{
-    box-shadow: 0px 15px 22px 0px rgba(0,0,0,0.75);
-    background-color: #ffc55f;
-    max-width: 600px;
-    margin: auto;
+main{
+    padding-top: 10px;
+    max-width: 900px;
+    background-color: ghostwhite;
     border-radius: 10px;
-}
-.conteudo-principal h1{
-    color: white;
-    text-align: center;
-    text-shadow: 1px 3px 10px black;
-    margin: 0;
-    font-size: 3rem;
-    
-}
-.sup-inf-linha{
-    text-align: center;
-    max-width: 600px;
-    padding: 5px;
-    background-color: #620f52;
-    border-radius: 4px;
-    margin: auto;
-    color: #ffec5e;
-}
-.superior-itens{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 30%;
-    font-size: 1.6rem;
-    color: white;
-    text-shadow: 1px 1px 3px black;
-
-    
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
 }
-.inferior-conteudo{
-    background-color: #ff4845;
-    border-radius: 10px;
+h1{
+    color: green;
     text-align: center;
-    color: white;
-    text-shadow: 1px 1px 3px black;
-    
 }
-.inferior-itens{
-    font-size: 1.6rem;
+P{
+    text-align: center;
+    width: 300px;
 }
-.pediragora{
-    margin-top: 20px;
+
+.esquerdo .imagem{
+    max-width: 300px;
+    border-radius: 50%;
 }
-.pediragora .botao{
-    border: none;
-    background-color: transparent;  
+.direito{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
 }
-.pediragora .botao a{
-    text-decoration: none;
-    font-size: 2rem;
-    background-color: #36173d;
+.direito  .fale-comigo{
+    max-width: 500px;
+    background-color: lightskyblue;
     border-radius: 5px;
+    box-shadow: -1px 10px 26px -14px rgba(0,0,0,0.75);
+    padding: 4px;
+    text-decoration: none;
     color: white;
-    padding: 10px;
 }
-
-.pediragora .botao a:hover{
-    background-color: #ffec5e;
-    color: #620f52;
+.direito img{
+    position: relative;
+    bottom: 30px;
+    left: 120px;
 }
-.rodape{
-    margin-top: 10px;
+.direito .fale-comigo:hover{
+    background-color: #340c31;
 }
-@media screen and (min-width:600px) {
-    .inferior-itens{
-        display: flex;
+@media screen and (max-width:760px) {
+    main{
+        flex-direction: column;
         justify-content: center;
-        gap: 5%;
+        align-items: center;
+        max-width: 380px;
+        
     }
+    .direito a{
+        max-width: 250px;
+    }
+}
 
+@media screen and (max-width:400px) {
+    main{
+        max-width: 200px;
+    }
+    .esquerdo .imagem{
+        width: 150px;
+    }
+    h1{
+        width: 150px;
+    }
+    p{
+        width: 150px;
+    }
+    .direito a{
+        width: 150px;
+        text-align: center;
+    }
+    .direito img{
+        left: 50px;
+    }
 }

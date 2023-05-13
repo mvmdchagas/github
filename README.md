@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Marcos Venicio</h1>
 <h3 align="center">Beginner developer.</h3>
 
-- 🌱 I’m currently learning **Responsive Web Design (freecodecamp)**
+- 🌱 I’m currently learning **responsive Web Design (freecodecamp)**
 
 - 📫 How to reach me **outrochagas@gmail.com**
 

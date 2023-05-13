@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Marcos Venicio</h1>
-<h3 align="center">Beginner developer direct from Brazil.</h3>
+<h3 align="center">Beginner developer.</h3>
 
 - 🌱 I’m currently learning **Responsive Web Design (freecodecamp)**
 

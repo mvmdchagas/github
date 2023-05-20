@@ -29,6 +29,12 @@ const chaveAcesso = variasArrays[3][0][1]
 console.log(chaveAcesso)*/
 
 //método push
-const arr1 = [1,2,3];
+/*const arr1 = [1,2,3];
 arr1.push("hoje", 12,"50",[1,2,60]);
-console.log(arr1)
+console.log(arr1)*/
+
+//método pop
+const guardarValor = ["meu que saco", 123,["tons"],["algebraic",["godwhy"]],100];
+const removido = guardarValor.pop();
+console.log(removido)
+console.log(guardarValor)

@@ -34,7 +34,12 @@ arr1.push("hoje", 12,"50",[1,2,60]);
 console.log(arr1)*/
 
 //método pop
-const guardarValor = ["meu que saco", 123,["tons"],["algebraic",["godwhy"]],100];
+/*const guardarValor = ["meu que saco", 123,["tons"],["algebraic",["godwhy"]],100];
 const removido = guardarValor.pop();
 console.log(removido)
-console.log(guardarValor)
+console.log(guardarValor)*/
+
+//método shift
+const i = [["chagas", 123,456,"ababa"], 123, ["subzsero"], 0]
+const j = i.shift();
+console.log(j);

@@ -39,7 +39,12 @@ const removido = guardarValor.pop();
 console.log(removido)
 console.log(guardarValor)*/
 
-//método shift
+/*método shift
 const i = [["chagas", 123,456,"ababa"], 123, ["subzsero"], 0]
 const j = i.shift();
-console.log(j);
+console.log(j);*/
+
+//método unshift
+const i = ["chagas", 28, ["brasil", "cuiaba"]]
+i.unshift(["mato grosso"]);
+console.log(i);
